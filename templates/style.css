@@ -1,0 +1,31 @@
+div {
+    background-color: rgb(232, 239, 246);
+    margin: 5%;
+    font-size: xx-large;
+    text-align: center;
+    max-width: 65%;
+}
+
+h1,
+h2,
+footer {
+    color: blue;
+
+
+}
+
+img {
+    max-height: 40rem;
+
+
+}
+
+ul,
+li {
+
+    list-style: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
