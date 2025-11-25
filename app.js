@@ -1,3 +1,6 @@
+//Vitaliy Yashnikov 49-5
+// לא הצלחתי למצוא שוטף להגשה
+пше
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
@@ -27,15 +30,15 @@ const server = http.createServer(function (req, res) {
         res.writeHead(200, { 'Content-Type': 'text/css' });
         fileStream.pipe(res);
 
-    
-    } else if (req.url.match('[.]png$' )) {
-    const imgPath = path.join(__dirname, '', req.url);
-    console.log(imgPath)
-    const fileStream = fs.createReadStream(imgPath);
-    res.writeHead(200, { 'Content-Type': 'image/png' });
-    fileStream.pipe(res);
 
-}
+    } else if (req.url.match('[.]png$')) {
+        const imgPath = path.join(__dirname, '', req.url);
+        console.log(imgPath)
+        const fileStream = fs.createReadStream(imgPath);
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        fileStream.pipe(res);
+
+    }
     else if (req.url.match('[.]jpeg$')) {
         const imgPath = path.join(__dirname, '', req.url);
         console.log(imgPath)
@@ -44,10 +47,10 @@ const server = http.createServer(function (req, res) {
         fileStream.pipe(res);
 
     } else {
-    res.writeHead(404, { 'Content-Type': 'text/html', });
-    res.end('<h1>Page not found</h1>');
-}
-    });
+        res.writeHead(404, { 'Content-Type': 'text/html', });
+        res.end('<h1>Page not found</h1>');
+    }
+});
 
 server.listen(3000); //listen for any incoming requests
 console.log('Node.js web server at port 3000 is running..');
