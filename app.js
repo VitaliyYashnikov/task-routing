@@ -1,6 +1,5 @@
 //Vitaliy Yashnikov 49-5
 // לא הצלחתי למצוא שוטף להגשה
-пше
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
